@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fixed Scroll Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            touch-action: pan-x;
+            background: #111;
+            height: 100vh;
+        }
+
+        .gallery-container {
+            display: flex;
+            height: 100vh;
+            width: 500vw;
+            transition: transform 1.5s cubic-bezier(0.23, 1 , 0.32, 1);
+        }
+
+        .slide {
+            flex: 0 0 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .photo {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            box-shadow: 0 0 2rem rgba(0,0,0,0.5);
+            border-radius: 0.5rem;
+            background: #fff;
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 3px;
+            background: rgba(255,255,255,0.2);
+            width: 200px;
+            border-radius: 3px;
+            z-index: 100;
+        }
+
+        .scroll-progress-bar {
+            height: 100%;
+            background: #fff;
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <div class="gallery-container">
+        <div class="slide">
+            <img src=".venv/babab/DSCF7427.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7454.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7545.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7558.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7573.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7575.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7580.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7598.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7600.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7611.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7618.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7621.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7625.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7628.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7654.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7655.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7680.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7692.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7694.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7701.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7717.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7720.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7730.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7747.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7753.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7758.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7763.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7800.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7803.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7843.JPG" class="photo" loading="lazy">
+        </div>
+        <div class="slide">
+            <img src=".venv/babab/DSCF7847.JPG" class="photo" loading="lazy">
+        </div>
+    </div>
+
+
+
+    <script>
+        const gallery = document.querySelector('.gallery-container');
+        const progressBar = document.querySelector('.scroll-progress-bar');
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        let isAnimating = false;
+        let startX = 0;
+        let isDragging = false;
+
+        // Инициализация галереи
+        function initGallery() {
+            gallery.style.transform = `translateX(0)`;
+            updateProgress();
+
+            // Проверка загрузки изображений
+            document.querySelectorAll('.photo').forEach(img => {
+                img.onload = () => console.log('Изображение загружено:', img.src);
+                img.onerror = () => console.error('Ошибка загрузки:', img.src);
+            });
+        }
+
+        // Обработчики событий
+        window.addEventListener('wheel', handleWheel, { passive: false });
+        window.addEventListener('touchstart', handleTouchStart, { passive: false });
+        window.addEventListener('touchmove', handleTouchMove, { passive: false });
+        window.addEventListener('touchend', handleTouchEnd);
+        window.addEventListener('resize', handleResize);
+
+        function handleWheel(e) {
+            e.preventDefault();
+            if(isAnimating) return;
+
+            const direction = Math.sign(e.deltaY);
+            navigate(direction > 0 ? 1 : -1);
+        }
+
+        function handleTouchStart(e) {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+        }
+
+        function handleTouchMove(e) {
+            if (!isDragging) return;
+            e.preventDefault();
+        }
+
+        function handleTouchEnd(e) {
+            if (!isDragging) return;
+            isDragging = false;
+
+            const endX = e.changedTouches[0].clientX;
+            const delta = startX - endX;
+
+            if(Math.abs(delta) > 50) {
+                navigate(delta > 0 ? 1 : -1);
+            }
+        }
+
+        function handleResize() {
+            gallery.style.transform = `translateX(-${currentIndex * 100}vw)`;
+        }
+
+        function navigate(direction) {
+            if(isAnimating) return;
+
+            const newIndex = Math.min(
+                Math.max(currentIndex + direction, 0),
+                slides.length - 1
+            );
+
+            if(newIndex === currentIndex) return;
+
+            isAnimating = true;
+            currentIndex = newIndex;
+
+            gallery.style.transform = `translateX(-${currentIndex * 100}vw)`;
+            updateProgress();
+
+            setTimeout(() => {
+                isAnimating = false;
+            }, 800);
+        }
+
+        function updateProgress() {
+            const progress = (currentIndex / (slides.length - 1)) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        // Запуск инициализации
+        initGallery();
+    </script>
+</body>
+</html>
